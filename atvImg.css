@@ -1,0 +1,65 @@
+.atvImg {
+	width: 240px;
+	height: 144px;
+	border-radius: 8px;
+	transform-style: preserve-3d;
+	-webkit-tap-highlight-color: rgba(#000,0);
+	
+	margin: 24px;
+	display: inline-block;
+	float: left;
+}
+
+.atvImg img {
+	width: 240px;
+	height: 144px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(14,21,47,0.25);
+}
+
+.atvImg-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	transition: all 0.25s ease-out;
+}
+
+
+.atvImg-container.over .atvImg-shadow {
+	box-shadow: 0 16px 32px rgba(14,21,47,0.25), 0 8px 8px rgba(14,21,47,0.25);
+}
+
+.atvImg-layers {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+	transform-style: preserve-3d;
+}
+
+.atvImg-rendered-layer {
+	position: absolute;
+	/* changed from 104% to 100% and -2% to 0% respectively,
+	but not sure how to change these on hover */
+	width: 100%;
+	height: 100%;
+	top: 0%; 
+	left: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	background-size: cover;
+	transition: all 0.125s ease-out;
+}
+
+.atvImg-shadow {
+	position: absolute;
+	top: 5%; 
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	transition: all 0.25s ease-out;
+	box-shadow: 0 0px 0px rgba(14,21,47,0);
+}
